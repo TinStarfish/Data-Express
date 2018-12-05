@@ -7,8 +7,38 @@ html
             label Username: 
             input(id="usernameEnter")
             br
+            label Email:  
+            input(id="passwordEnter")
+            br
             label Password:  
             input(id="passwordEnter")
             br
+            label Age:  
+            input(id="passwordEnter")
+            br
+            label Which Pokemon do you want as your starter?  
+            select(id="question_1")
+                option(value="0") Bulbasaur
+                option(value="1") Charmander
+                option(value="2") Squirtle
+            br
+            label Are you a cat person or a dog person?  
+            select(id="question_2")
+                option(value="0") Cat person
+                option(value="1") Dog person  
+            br
+            label What color are your eyes?
+            select(id="question_3")
+                option(value="0") Brown
+                option(value="1") Blue
+                option(value="2") Green
+                option(value="3") Other
+            br
             input(type="submit")
+        h1 Data Display
+        div
+            label Username:
+            label(id="usernameHolder")
+            script(src="displayData.js")
+
     
