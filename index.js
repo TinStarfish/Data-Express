@@ -81,8 +81,8 @@ app.get('/edit', function (req, res) {
     });    
 });
 
-app.get('/mainpage', function (req, res) {
-    res.render('mainpage', {
+app.get('/index', function (req, res) {
+    res.render('index', {
         'title':'Home'
     });    
 });
