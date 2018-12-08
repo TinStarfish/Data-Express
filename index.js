@@ -12,6 +12,7 @@ var pokemonTest = "Charmander";
 var personTypeTest = 0;
 var eyeColorTest = "Blue";
 
+
 var db = mongoose.connect('mongodb://localhost/test');
 var Schema = mongoose.Schema;
 
@@ -51,6 +52,8 @@ Bob.save(function(error) {
     
 });
 
+
+
 var app = express();
 
 app.set('view engine', 'pug');
@@ -59,7 +62,8 @@ app.use(express.static(path.join(__dirname + "/public")));
 
 app.get('/', function (req, res) {
     res.render('title', {
-        'title':'Title'
+        'title':'Title',
+        "data":sampleData
     });    
 });
 
@@ -84,6 +88,7 @@ app.get('/edit', function (req, res) {
 app.get('/index', function (req, res) {
     res.render('index', {
         'title':'Home'
+        
     });    
 });
 
@@ -94,4 +99,4 @@ app.get('/userCreated', function (req, res) {
 });
 
 
-app.listen(3000);   
+app.listen(8000);   

@@ -1,3 +1,18 @@
 extends layout
+
 block content
+  h1 Data Display
+  h2 Which Pokemon Do you want as your starter?
+  canvas(id='demo' width=1000 height=250)    
+  script(src='displayData.js')
+  p Bulbasaur     Squirtle    Charmander
+
+  h2 Are you a cat person or a dog person?
+  canvas(id='persontype' width=1000 height=250)    
+  script(src='displayData.js')
+  p Dog Person Cat Person
   
+  h2 What color are your eyes?
+  canvas(id='eyecolor' width=1000 height=250)    
+  script(src='displayData.js')
+  p Brown Green Blue Other
