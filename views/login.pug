@@ -1,11 +1,11 @@
 extends layout
 block content
   h1 Login
-  form(action="/index")
+  form(method="POST" action="/login")
     label Email:
-    input(id="emailEnter")
+    input(id="emailEnter" name="email")
     br
     label Password:
-    input(id="passwordEnter")
+    input(id="passwordEnter" name="password")
     br
     input(type="submit" value="Submit")

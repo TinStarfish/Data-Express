@@ -1,39 +1,49 @@
 extends layout
 block content
-  h1 Sign Up
-  form(action="/userCreated")
-    label Username: 
-    input(id="usernameEnter")
-    br
-    label Email:  
-    input(id="emailEnter")
-    br
-    label Password:  
-    input(id="passwordEnter")
-    br
-    label Age:  
-    input(id="ageEnter")
-    br
-    label Which Pokemon do you want as your starter?  
-    select(id="question_1")
-      option(value="0") Bulbasaur
-      option(value="1") Charmander
-      option(value="2") Squirtle
-    br
-    label Are you a cat person or a dog person?  
-    select(id="question_2")
-      option(value="0") Cat person
-      option(value="1") Dog person  
-    br
-    label What color are your eyes?
-    select(id="question_3")
-      option(value="0") Brown
-      option(value="1") Blue
-      option(value="2") Green
-      option(value="3") Other
-    br
-    input(type="submit")
-  h1 Data Display
-  div
-    label Username:
-    label(id="usernameHolder")
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1 Sign Up
+        form(method="POST" action="/signup")
+          div.form-group
+            label Username: 
+            input(type="text" id="name" name="name")
+            br
+          div.form-group
+            label Email:  
+            input.form-control(type="email" id="emailEnter" name="email")
+            br
+          div.form-group
+            label Password:  
+            input.form-control(type="password" id="passwordEnter" name="pw")
+            br
+          div.form-group
+            label Confirm Password:  
+            input.form-control(type="password" id="confPasswordEnter" name="pw2")
+            br
+          div.form-group
+            label Age:  
+            input(id="ageEnter" name="age")
+            br
+          div.form-group
+            label Which Pokemon do you want as your starter?  
+            select(id="question_1" name="pokemon")
+              option(value="0") Bulbasaur
+              option(value="1") Charmander
+              option(value="2") Squirtle
+            br
+          div.form-group
+            label Are you a cat person or a dog person?  
+            select(id="question_2" name="catDog")
+              option(value="0") Cat person
+              option(value="1") Dog person  
+            br
+          div.form-group
+            label What color are your eyes?
+            select(id="question_3" name="color")
+              option(value="0") Brown
+              option(value="1") Blue
+              option(value="2") Green
+              option(value="3") Other
+            br
+          input(type="submit")
